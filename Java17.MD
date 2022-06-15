@@ -129,10 +129,15 @@ public static void ulozeniDoSouboru(String cesta, String output){
 ### Zápis binárních souborů
 
 ```java
-try (DataOutputStream out = new DataOutputStream(new FileOutputStream(binaryFile))) {
-    out.writeUTF("Text");
-    out.writeBoolean(false);
-    out.writeInt(50);
+public void ulozeniBinarky(String cesta, String output){
+    File binaryFile = new File(cesta);
+    try (DataOutputStream out = new DataOutputStream(new FileOutputStream(binaryFile, true/false))) {
+        for(InstanceTridy nazevInstance:ArrayList){
+            out.writeUTF("Text");
+            out.writeBoolean(false);
+            out.writeInt(50);
+        }
+    }    
 }
 ```
 
@@ -143,7 +148,7 @@ try (DataOutputStream out = new DataOutputStream(new FileOutputStream(binaryFile
 ```java
 public static String cteniBinarky(String cesta){
 StringBuilder sb = new StringBuilder();
-try (DataInputStream in = new DataInputStream(new FileInputStream(output))) {
+try (DataInputStream in = new DataInputStream(new FileInputStream(cesta))) {
     boolean end = false;
     String text;
     int cislo;
