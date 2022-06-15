@@ -32,3 +32,28 @@ public class InstanceTridy{
   public InstanceTridy(){
     }
 ```
+
+## Metody řazení
+### Řazení Stringu
+```java
+public class SortString implements Comparator<Trida>{
+    @Override
+    public int compare(Trida o1, Trida o2){
+        return o1.getString().compareTo(o2.getString());
+    }
+}
+```
+### Řazení Intu
+```java
+public class SortInt implements Comparator<Trida>{
+    @Override
+    public int compare(Trida o1, Trida o2){
+        return o1.getInt() - o2.getInt();
+    }
+}
+```
+### Sort
+```java
+public void sortString/Int(){
+    Collections.sort(this.ArrayList, new SortString/Int());
+}
