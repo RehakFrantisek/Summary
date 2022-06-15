@@ -125,3 +125,43 @@ public static void ulozeniDoSouboru(String cesta, String output){
     }
 }
 ```
+
+### Zápis binárních souborů
+
+```java
+try (DataOutputStream out = new DataOutputStream(new FileOutputStream(binaryFile))) {
+    out.writeUTF("Text");
+    out.writeBoolean(false);
+    out.writeInt(50);
+}
+```
+
+* Mezi proudy ještě můžeme přidat `BufferedOutputStream`
+
+### Čtení binárních souborů
+
+```java
+public static String cteniBinarky(String cesta){
+StringBuilder sb = new StringBuilder();
+try (DataInputStream in = new DataInputStream(new FileInputStream(output))) {
+    boolean end = false;
+    String text;
+    int cislo;
+    boolean pravda;
+    while (!end) {
+        try {
+            text = in.readUTF();
+            pravda = in.readBoolean();
+            cislo = in.readInt();
+            sb.append(StringFormat("%s %d %s, text, cislo, pravda);
+            sb.append("\n");
+        }
+        catch (EOFException ex) {
+            end = true;
+        }
+    }
+    return sb.toString();
+}
+```
+
+* Mezi proudy ještě můžeme přidat `BufferedInputStream`
