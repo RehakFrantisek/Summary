@@ -170,3 +170,19 @@ try (DataInputStream in = new DataInputStream(new FileInputStream(cesta))) {
 ```
 
 * Mezi proudy ještě můžeme přidat `BufferedInputStream`
+
+## Metoda String format()
+
+* Metoda vrací formátovaný string dle zadaného formátu a argumentů
+
+### Datové typy
+`integer`   - %d
+`string`    - %s
+`float`     - %f
+`character` - %c
+`date/time` - %t
+
+### Formátování
+String.format("value is %32.12f",32.33434);//returns 12 char fractional part filling with 0  
+String.format("|%-10d|", 101); // Left-justifying within the specified width  
+String.format("|%,d|", 10000000); // prints: |10,000,000|
