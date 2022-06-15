@@ -58,6 +58,7 @@ public class SortInt implements Comparator<Trida>{
 public void sortString/Int(){
     Collections.sort(this.ArrayList, new SortString/Int());
 }
+```
 
 ## Práce se soubory
 
