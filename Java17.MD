@@ -176,11 +176,11 @@ try (DataInputStream in = new DataInputStream(new FileInputStream(cesta))) {
 * Metoda vrací formátovaný string dle zadaného formátu a argumentů
 
 ### Datové typy
-`integer`   - %d <br/>
-`string`    - %s <br/>
-`float`     - %f <br/>
-`character` - %c <br/>
-`date/time` - %t
+`integer`   - `%d` <br/>
+`string`    - `%s` <br/>
+`float`     - `%f` <br/>
+`character` - `%c` <br/>
+`date/time` - `%t`
 
 ### Formátování
 ```java
