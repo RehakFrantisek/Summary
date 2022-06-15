@@ -43,6 +43,7 @@ public class SortString implements Comparator<Trida>{
     }
 }
 ```
+
 ### Řazení Intu
 ```java
 public class SortInt implements Comparator<Trida>{
@@ -52,12 +53,18 @@ public class SortInt implements Comparator<Trida>{
     }
 }
 ```
+
 ### Collections Sort
 ```java
 // volání třídy Comparator
 public void sortString/Int(){
     Collections.sort(this.ArrayList, new SortString/Int());
 }
+```
+### Collections Shuffle
+```java
+// volání třídy Comparator
+Collections.shuffle(list);
 ```
 
 ## Práce se soubory
