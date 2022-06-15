@@ -108,3 +108,20 @@ public void nacistSouborDoList(String cesta){
         this.instanceTridy.add(nazevNove);
     }
 }
+```
+
+### Zápis textových souborů
+
+#### PrintWriter
+
+```java
+public static void ulozeniDoSouboru(String cesta, String output){
+    File file = new File(cesta);
+    // parametr true / false jako `boolean append`
+    try(BufferedWriter bw = new BufferedWriter(new PrintWriter(new FileWriter(file, true/false))){
+        pw.write(output+"\n");
+        pw.flush();
+        pw.close();
+    }
+}
+```
