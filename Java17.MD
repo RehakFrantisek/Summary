@@ -188,3 +188,16 @@ String.format("value is %32.12f",32.33434);//returns 12 char fractional part fil
 String.format("|%-10d|", 101); // Left-justifying within the specified width  
 String.format("|%,d|", 10000000); // prints: |10,000,000|
 ```
+
+## Generování random čísel
+
+### Knihovna Math
+```java
+public ArrayList<Trida> nazevListu = new ArrayList<>();
+private Trida nazevTridy = null;
+
+public void randomCislo(){
+    int random = (int) (Math.random()*ArrayList<>.size());
+    this.nazevTridy = this.nazevListu.get(random);
+}
+```
