@@ -92,12 +92,18 @@ public static String souborDoStringu(String cesta){
 public void nacistSouborDoList(String cesta){
     String s = "";
     try{
+        // Obsah souboru do stringu
         s = SouborDoStringu(cesta);
     } catch ( ) { }
+    // Rozdělení stringu na řádky
     String[] radky = s.split("\n");
+    // Procházení všech řádků
     for(String radek : radky) {
+        // Nahrazení 2 a více mezer za jednu mezeru
         radek = radek.replaceAll("\\s{2,}", " ");
+        // Rozdělení řádku delimetrem
         String[] att = radek.split(" ");
+        // Přidání nového objektu
         DatovyTypTridy nazevNove = new InstanceTridy(Integer.parseInt(att[0]), att[1]);
         this.instanceTridy.add(nazevNove);
     }
