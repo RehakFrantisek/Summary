@@ -153,7 +153,7 @@ try (DataInputStream in = new DataInputStream(new FileInputStream(output))) {
             text = in.readUTF();
             pravda = in.readBoolean();
             cislo = in.readInt();
-            sb.append(StringFormat("%s %d %s, text, cislo, pravda));
+            sb.append(StringFormat("%s %d %s", text, cislo, pravda));
             sb.append("\n");
         }
         catch (EOFException ex) {
