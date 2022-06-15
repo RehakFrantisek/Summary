@@ -65,6 +65,12 @@ public void sortString/Int(){
 * Preferujeme konstrukci _try-with-resources_
 * Proudy obvykle vyhazují výjimky, třeba odchytit
 
+### Metody na obsluhu souborů
+
+`file.list();`          - název souborů ve file(u) do pole stringů <br/>
+`file.createNewFile()`  - vytvoření nového souboru <br/>
+`file.mkdirs()`         - vytvoření adresáře a všech neexistujících podadresářů v cestě <br/>
+
 ### Čtení textových souborů
 
 #### BufferedReader
@@ -199,5 +205,25 @@ private Trida nazevTridy = null;
 public void randomCislo(){
     int random = (int) (Math.random()*ArrayList<>.size());
     this.nazevTridy = this.nazevListu.get(random);
+}
+```
+
+## Přetypování
+
+### Převod Stringu na Char[] Array
+```java
+char[] charArray;
+charArray = randomString.toCharArray();
+char[] noveCharArray = new char[sizeOfChar];
+for(int i = 0; i < charArray.length; i++){
+    noveCharArray = '_';
+}
+```
+
+#### Porovnání char[] array
+```java
+while(!Arrays.equals(charArray, noveCharArray){
+    sout(Zadejte pismeno);
+    char pismeno = sc.next().charAt(0);
 }
 ```
