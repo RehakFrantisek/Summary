@@ -103,7 +103,7 @@ public void nacistSouborDoList(String cesta){
         radek = radek.replaceAll("\\s{2,}", " ");
         // Rozdělení řádku delimetrem
         String[] att = radek.split(" ");
-        // Přidání nového objektu
+        // Přidání nově vytvořené instance do kontejneru ArrayList
         DatovyTypTridy nazevNove = new InstanceTridy(Integer.parseInt(att[0]), att[1]);
         this.instanceTridy.add(nazevNove);
     }
