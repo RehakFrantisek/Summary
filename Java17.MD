@@ -28,6 +28,7 @@ public class Main{
 ```java
 public class InstanceTridy{
   private ArrayList<Trida> nazev = new ArrayList<>();
+  // konstruktor
   public InstanceTridy(){
     }
 ```
